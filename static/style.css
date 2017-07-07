@@ -1,0 +1,64 @@
+.alterate {
+    height: 22px;
+    margin-bottom: 40px;
+}
+
+#main {
+    /*background: yellow;*/
+    height: 500px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#user_gold {
+    /*background: red;*/
+    width: 100%;
+    height: 4%;
+    margin-bottom: 1px;
+}
+
+#entities {
+    /*background: blue;*/
+    height: 56%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.sub_entities {
+    text-align: center;
+    display: inline-block;
+    /*background: green;*/
+    width: 24%;
+    height: 100%;
+    margin-left: 7px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#label_a {
+    display: block;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+#acti_form {
+    width: 90%;
+    height: 37%;
+    /*background: orange;*/
+    margin: 0 auto;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+.find_gold {
+    height: 10px;
+    width: 85px;
+    box-shadow: 2px 2px 2px 2px black;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 21px;
+}

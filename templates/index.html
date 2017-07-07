@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>Ninja Gold</title>
+</head>
+<body>
+    <div id="main">
+        <p id="user_gold">
+            Your gold: {{session['gold']}}
+        </p>
+        <div id="entities">
+            <div class="sub_entities">
+                <p class="alterate">Farm</p>
+                <p class="alterate">(earns 10-20 golds)</p>
+                <form  action="/process_money" method="post">
+                    <input type="hidden" name="building" value="farm" />
+                    <input class="find_gold" type="submit" value="Find Gold!"/>
+                </form>
+            </div>
+            <div class="sub_entities">
+                <p class="alterate">Cave</p>
+                <p class="alterate">(earns 5-10 golds)</p>
+                <form  action="/process_money" method="post">
+                    <input type="hidden" name="building" value="cave" />
+                    <input class="find_gold" type="submit" value="Find Gold!"/>
+                </form>            </div>
+            <div class="sub_entities">
+                <p class="alterate">House</p>
+                <p class="alterate">(earns 2-5 golds)</p>
+                <form  action="/process_money" method="post">
+                    <input type="hidden" name="building" value="house" />
+                    <input class="find_gold" type="submit" value="Find Gold!"/>
+                </form>            </div>
+            <div class="sub_entities">
+                <p class="alterate">Casino</p>
+                <p class="alterate">(earns 0-50 golds)</p>
+                <form  action="/process_money" method="post">
+                    <input type="hidden" name="building" value="casino" />
+                    <input class="find_gold" type="submit" value="Find Gold!"/>
+                </form>            </div>
+        </div>
+        <h2 id="label_a" for="activites">Activities:</h2>
+        <div id="acti_form">
+            {% for item in session['activities'] %}
+            <p> {{item}} </p>
+            {% endfor %}
+        </div>
+        <form action="/end_session" method='post'>
+            <input type="submit" value="End Session">
+        </form>
+    </div>
+</body>
+</html>
